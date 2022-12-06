@@ -1,1 +1,1 @@
-# programmers-study
+# python-study-for-yoo
