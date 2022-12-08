@@ -1,0 +1,1 @@
+# travel 파일에 thailand.py 수정됨.
