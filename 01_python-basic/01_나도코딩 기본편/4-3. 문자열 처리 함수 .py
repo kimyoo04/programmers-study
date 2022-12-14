@@ -30,7 +30,7 @@ print(python.find("n"))
 # find는 -1 로  처리하고 계속 진행하지만, 
 # index는 에러가 뜨면서 멈춰버린다. 
 print(python.find("Java"))
-"print(python.index("Java"))"
+print(python.index("Java"))
 
 
 # 몇 번 사용한지 알아볼 때
