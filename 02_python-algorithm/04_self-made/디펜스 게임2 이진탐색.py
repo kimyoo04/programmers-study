@@ -25,5 +25,5 @@ def solution (n, m, k, enemy):
         
     return start - 1
 
-a = solution(7, 3, 3, [4, 2, 4, 5, 3, 3, 1])
+a = solution(7, 3, 3, [4, 2, 4, 5, 3, 3, 1, 4, 3])
 print(a)

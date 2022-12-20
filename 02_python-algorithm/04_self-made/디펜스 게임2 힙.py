@@ -42,7 +42,7 @@ def solution(n, m, k, enemy):
         if enemy_min_heap[0][0] < round_enemy:
             backup = enemy_min_heap[:] # 복사 <------------------- 비효율적임 
             heappush(enemy_min_heap, (round_enemy, round_))
-            backup_round, round_enemy = heappop(enemy_min_heap)[0]
+            round_enemy = heappop(enemy_min_heap)[0]
         
         # 최대한 기사를 먼저 사용
         if round_enemy and m:
@@ -86,8 +86,5 @@ def solution(n, m, k, enemy):
     else: return k_used_rounds
 
 # a = solution(5, 4, 4, [3, 3, 2, 3, 3, 4, 4, 4, 4, 4])
-a = solution(7, 3, 3, [4, 2, 4, 5, 3, 3, 1])
+a = solution(7, 3, 3, [4, 2, 4, 5, 3, 3, 1, 4, 3])
 print(a)
-
-
-
