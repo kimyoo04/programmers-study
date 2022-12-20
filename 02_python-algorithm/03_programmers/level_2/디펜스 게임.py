@@ -1,3 +1,5 @@
+# https://school.programmers.co.kr/learn/courses/30/lessons/142085
+
 from heapq import heappush, heappop, heappushpop
 
 def solution(n, k, enemy):
