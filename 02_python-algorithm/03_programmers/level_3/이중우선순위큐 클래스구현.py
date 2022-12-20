@@ -2,6 +2,16 @@ from heapq import heappop, heappush
 
 REMOVED = "r"
 
+'''
+- min_ele, max_ele = [v, vid], [-v, vid]
+- min_ele를 min_heap에, max_ele를 max_heap에 넣고, [min_ele, max_ele]를 entry_finder 딕셔너리에 vid 키에 넣어서 min_heap과 max_heap의 vid의 값이 같은 주소를 가리킨다.
+- entry_finder.pop(vid)를 통해 v와 vid가 가리키는 주소를 entries에 할당
+- entries[0][1] 혹은 entries[1][1] 인덱싱으로 vid가 가리키는 주소의 값을 REMOVED로 재할당을 통해 min_heap, max_heap에 있는 값도 수정
+
+-> _check_empty 메서드로 vid가 REMOVED로 바뀌었으면 heappop을 통해 갱신해서 진짜 최소값 혹은 최대값을 받는다.
+'''
+
+
 class DoublePriorityQueue:
 
     def __init__(self):
@@ -54,11 +64,11 @@ def solution(operations):
     dpq = DoublePriorityQueue()
 
     for each in operations:
-        op, num = each.split(" ")
+        option, num = each.split(" ")
         num = int(num)
-        if op == "I":
+        if option == "I":
             dpq.insert(num)
-        elif op == "D" and num == -1:
+        elif option == "D" and num == -1:
             dpq.pop_min()
         else:
             dpq.pop_max()
